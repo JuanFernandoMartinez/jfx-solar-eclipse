@@ -1,5 +1,6 @@
 package ui;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
@@ -46,7 +47,7 @@ public class EclipseGUIController {
 
     @FXML
     private ImageView imgMoon;
-    EclipseGUIController{
+    public EclipseGUIController(){
         
     }
     @FXML
@@ -54,11 +55,7 @@ public class EclipseGUIController {
 
     }
 
-    @FXML
-    void 5005ff(ActionEvent event) {
-
-    }
-
+    
     @FXML
     void fffb21(ActionEvent event) {
 
