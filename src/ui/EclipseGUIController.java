@@ -1,3 +1,4 @@
+package ui;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
@@ -11,6 +12,7 @@ public class EclipseGUIController {
 
     @FXML
     private Circle shapeSun;
+    
 
     @FXML
     private Circle star4;
@@ -44,10 +46,10 @@ public class EclipseGUIController {
 
     @FXML
     private ImageView imgMoon;
-    EclipseGUIController{
+    public EclipseGUIController(){
         
     }
-    @FXML
+   /* @FXML
     void eaff05(ActionEvent event) {
 
     }
@@ -60,6 +62,6 @@ public class EclipseGUIController {
     @FXML
     void fffb21(ActionEvent event) {
 
-    }
+    }*/
 
 }
