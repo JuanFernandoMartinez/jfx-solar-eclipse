@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
 <?import javafx.scene.control.Button?>
+=======
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+>>>>>>> 82d70c643ab8c99a50f57d4faead835e21635302
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 
+<<<<<<< HEAD
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.EclipseGUIController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eaff05" height="400.0" layoutX="5.0" opacity="0.57" stroke="BLACK" strokeType="INSIDE" width="593.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5005ff" height="400.0" layoutX="4.0" stroke="BLACK" strokeType="INSIDE" width="593.0" />
+=======
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eaff05" height="400.0" layoutX="5.0" opacity="0.57" stroke="BLACK" strokeType="INSIDE" width="593.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5005ff" height="400.0" layoutX="5.0" stroke="BLACK" strokeType="INSIDE" width="593.0" />
+>>>>>>> 82d70c643ab8c99a50f57d4faead835e21635302
       <Circle fill="DODGERBLUE" layoutX="73.0" layoutY="179.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#fffb21" layoutX="301.0" layoutY="178.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" />
       <ImageView fitHeight="114.0" fitWidth="114.0" layoutX="14.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
@@ -26,9 +40,14 @@
       <Circle fill="WHITE" layoutX="187.0" layoutY="225.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="493.0" layoutY="256.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="300.0" layoutY="294.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+<<<<<<< HEAD
       <Circle fill="WHITE" layoutX="426.0" layoutY="210.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="140.0" layoutY="322.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Button fx:id="left" layoutX="57.0" layoutY="346.0" mnemonicParsing="false" text="Izquierda" />
       <Button fx:id="right" layoutX="487.0" layoutY="346.0" mnemonicParsing="false" text="Derecha" />
+=======
+      <Circle fill="WHITE" layoutX="426.0" layoutY="353.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="140.0" layoutY="322.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+>>>>>>> 82d70c643ab8c99a50f57d4faead835e21635302
    </children>
 </AnchorPane>
