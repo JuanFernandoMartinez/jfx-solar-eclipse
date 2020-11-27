@@ -1,9 +1,7 @@
 package ui;
-<<<<<<< HEAD
-=======
+
 
 import javafx.event.ActionEvent;
->>>>>>> c5668294f90586c1b56d89e6a550a30660c6ed83
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -66,12 +64,17 @@ public class EclipseGUIController {
 
 
     @FXML
-<<<<<<< HEAD
+
     void fffb21(ActionEvent event) {
 
     }*/
-=======
-   
->>>>>>> c5668294f90586c1b56d89e6a550a30660c6ed83
 
+
+	private Button right;
+	@FXML 
+	void left(ActionEvent event) {
+		Moon nm = new Moon(moon.getX());
+		nm.moveLeft();
+		moon.setX(moon.getX() - 10);    	
+	}
     }
