@@ -1,11 +1,12 @@
 package model;
 
 public class Moon{
-    private int x;
+    private double x;
     private double r;
     
-    public Moon(int x){
+    public Moon(double x, double r){
         this.x = x;
+        this.r = r;
       
     }
 
@@ -16,7 +17,7 @@ public class Moon{
     	x += 10;
     }
 
-    public int getX(){
+    public double getX(){
         return x;
     }
 

@@ -7,7 +7,13 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import model.Moon;
+import threads.MoonThread;
 public class EclipseGUIController {
+	
+	
+	private int dir;
+	
+	private MoonThread mt;
 	
     private Moon moon;
 
@@ -52,29 +58,51 @@ public class EclipseGUIController {
     @FXML
     private ImageView imgMoon;
     public EclipseGUIController(){
-        
+        moon = new Moon(73, 47);
+        mt = new MoonThread(moon, this);
+        dir = 0;
     }
    /* @FXML
     void eaff05(ActionEvent event) {
     
     }
-
+	*/
     @FXML
     private Button left;
 
-
+    /*
     @FXML
 
     void fffb21(ActionEvent event) {
 
     }*/
 
-
+    @FXML
 	private Button right;
-	@FXML 
-	void left(ActionEvent event) {
-		Moon nm = new Moon(moon.getX());
-		nm.moveLeft();
-		moon.setX(moon.getX() - 10);    	
+	
+	 
+	public void left() {
+		dir = 0;
+		if (!mt.isAlive()) {
+			mt.start();
+		}
 	}
-    }
+	
+	public void right() {
+		dir = 1;
+		if (!mt.isAlive()) {
+			mt.start();
+		}
+	}
+	
+	
+	public int getDir() {
+		return dir;
+	}
+	
+	public void update() {
+		shapeMoon.setLayoutX(moon.getX());
+		imgMoon.setLayoutX(moon.getX());
+	}
+	
+  }
