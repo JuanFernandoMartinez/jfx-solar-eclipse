@@ -1,9 +1,12 @@
+package ui;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.Button;
 import javafx.scene.shape.Circle;
 import model.Moon;
 public class EclipseGUIController {
-
+	
     private Moon moon;
 
     @FXML
@@ -42,24 +45,18 @@ public class EclipseGUIController {
     @FXML
     private Circle planet1;
 
-    @FXML
-    private ImageView imgMoon;
-    EclipseGUIController{
-        
-    }
-    @FXML
-    void eaff05(ActionEvent event) {
 
-    }
 
     @FXML
-    void 5005ff(ActionEvent event) {
-
-    }
+    private Button left;
 
     @FXML
-    void fffb21(ActionEvent event) {
-
+    private Button right;
+    @FXML 
+    void left(ActionEvent event) {
+    	Moon nm = new Moon(moon.getX());
+    	nm.moveLeft();
+    	moon.setX(moon.getX() - 10);    	
     }
 
-}
+    }
