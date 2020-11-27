@@ -1,10 +1,16 @@
 package ui;
+<<<<<<< HEAD
+=======
+
+import javafx.event.ActionEvent;
+>>>>>>> c5668294f90586c1b56d89e6a550a30660c6ed83
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import model.Moon;
 public class EclipseGUIController {
-
+	
     private Moon moon;
 
     @FXML
@@ -44,6 +50,7 @@ public class EclipseGUIController {
     @FXML
     private Circle planet1;
 
+
     @FXML
     private ImageView imgMoon;
     public EclipseGUIController(){
@@ -51,17 +58,20 @@ public class EclipseGUIController {
     }
    /* @FXML
     void eaff05(ActionEvent event) {
-
+    
     }
 
     @FXML
-    void 5005ff(ActionEvent event) {
+    private Button left;
 
-    }
 
     @FXML
+<<<<<<< HEAD
     void fffb21(ActionEvent event) {
 
     }*/
+=======
+   
+>>>>>>> c5668294f90586c1b56d89e6a550a30660c6ed83
 
-}
+    }
