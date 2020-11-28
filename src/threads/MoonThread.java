@@ -16,15 +16,10 @@ public class MoonThread extends Thread {
 	
 	@Override
 	public void run() {
-		int i = 100;
-		while (i>0) {
+		while (moon.isMoving()) {
 			Platform.runLater(new Thread() {
 				public void run() {
-					if (app.getDir() == 0) {
-						moon.moveLeft();
-					}else {
-						moon.moveRight();
-					}
+					moon.advance(app.getSliderValue() );
 					
 					app.update();
 				}

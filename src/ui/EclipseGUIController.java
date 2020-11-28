@@ -1,18 +1,20 @@
 package ui;
 
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.scene.transform.Translate;
 import model.Moon;
 import threads.MoonThread;
-public class EclipseGUIController {
+public class EclipseGUIController   {
 	
 	
-	private int dir;
+	
 	
 	private MoonThread mt;
 	
@@ -61,16 +63,14 @@ public class EclipseGUIController {
     public EclipseGUIController(){
         moon = new Moon(73, 47);
         mt = new MoonThread(moon, this);
-        dir = 0;
+        slider=new Slider(10,70,20);
     }
    /* @FXML
     void eaff05(ActionEvent event) {
     
     }
 	*/
-    @FXML
-    private Button left;
-
+    
     /*
     @FXML
 
@@ -79,10 +79,33 @@ public class EclipseGUIController {
     }*/
 
     @FXML
-	private Button right;
+    private Button stop;
+
+    @FXML
+    private Button start;
+
+    @FXML
+    private Slider slider;
+
+    @FXML
+    public void startBtn(ActionEvent event) {
+    	start.setDisable(false);
+    	stop.setDisable(true);
+    	mt.start();
+    }
+
+    @FXML
+    public void stopBtn(ActionEvent event) {
+    	stop.setDisable(false);
+    	start.setDisable(true);
+    	moon.setMoving(false);
+    }
+
 	
-	 
-	public void left() {
+   public double  getSliderValue() {
+	   return slider.getValue();
+   }
+/*	public void left() {
 		dir = 0;
 		if (!mt.isAlive()) {
 			mt.start();
@@ -95,11 +118,7 @@ public class EclipseGUIController {
 			mt.start();
 		}
 	}
-	
-	
-	public int getDir() {
-		return dir;
-	}
+*/	
 	
 	public void update() {
 		shapeMoon.getTransforms().add(new Translate(moon.getX(), shapeMoon.getLayoutY()));
