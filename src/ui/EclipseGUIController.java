@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
+import javafx.scene.transform.Translate;
 import model.Moon;
 import threads.MoonThread;
 public class EclipseGUIController {
@@ -101,8 +102,7 @@ public class EclipseGUIController {
 	}
 	
 	public void update() {
-		shapeMoon.setLayoutX(moon.getX());
-		imgMoon.setLayoutX(moon.getX());
+		shapeMoon.getTransforms().add(new Translate(moon.getX(), shapeMoon.getLayoutY()));
 	}
 	
   }

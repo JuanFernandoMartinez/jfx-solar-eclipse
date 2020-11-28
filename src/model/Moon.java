@@ -1,6 +1,8 @@
 package model;
 
 public class Moon{
+	
+	private static final double MAX = 900;
     private double x;
     private double r;
     
@@ -10,11 +12,11 @@ public class Moon{
       
     }
 
-    public void moveRight(){
-        x += 10;
-    }
-    public void moveLeft() {
-    	x += 10;
+    public void advance() {
+    	x+=10;
+    	if (x >= MAX) {
+    		x = -2*r;
+    	}
     }
 
     public double getX(){
