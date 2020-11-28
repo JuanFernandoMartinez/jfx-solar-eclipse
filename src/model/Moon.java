@@ -19,6 +19,10 @@ public class Moon{
         moving=false;
     }
 
+	/**
+	*addvance one step <br>
+	*@param step pixels quantity to add
+	*/
     public void advance(double step) {
     	x+=step;
     	if (x >= max) {
