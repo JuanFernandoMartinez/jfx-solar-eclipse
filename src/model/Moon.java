@@ -2,9 +2,7 @@ package model;
 
 public class Moon{
 	
-	/**
-	 * @param max the max to set
-	 */
+	
 	public void setMax(double max) {
 		this.max = max;
 	}
@@ -19,7 +17,6 @@ public class Moon{
         this.r = r;
         this.max=max;
         moving=false;
-        System.out.println("X:"+x+", r:"+r+", max:"+max+", moving: "+moving);
     }
 
     public void advance(double step) {

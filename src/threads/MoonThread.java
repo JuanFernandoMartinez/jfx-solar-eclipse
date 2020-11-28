@@ -19,6 +19,7 @@ public class MoonThread extends Thread {
 			Platform.runLater(new Thread() {
 				public void run() {
 					moon.advance(app.getSliderValue());
+					
 					app.update();
 				}
 			});
@@ -26,7 +27,6 @@ public class MoonThread extends Thread {
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 

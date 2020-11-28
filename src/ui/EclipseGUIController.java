@@ -13,8 +13,13 @@ import threads.MoonThread;
 
 public class EclipseGUIController {
 
+	private final static int[] ILLUMINATED = new int[] { 255, 249, 139 };
+
 	private MoonThread mt;
 
+	private Circle[] stars;
+	private Circle[] planets;
+	
 	private Moon moon;
 
 	@FXML
@@ -69,13 +74,23 @@ public class EclipseGUIController {
 	private Slider slider;
 
 	public void initialize() {
-		moon = new Moon(shapeMoon.getLayoutX(), shapeMoon.getRadius(),600);
-		slider = new Slider(10, 70, 20);		
-		System.out.println("aiuda");
+		moon = new Moon(shapeMoon.getLayoutX(), shapeMoon.getRadius(), 600);
+		stars= new Circle[5];
+		stars[0]=star1;
+		stars[1]=star2;
+		stars[2]=star3;
+		stars[3]=star4;
+		stars[4]=star5;
+		planets= new Circle[5];
+		planets[0]=planet1;
+		planets[1]=planet2;
+		planets[2]=planet3;
+		planets[3]=planet4;
+		planets[4]=planet5;
 	}
 
 	public EclipseGUIController() {
-			
+
 	}
 
 	@FXML
@@ -100,10 +115,32 @@ public class EclipseGUIController {
 	}
 
 	public void update() {
-		//shapeMoon.setLayoutX(moon.getX());
 		shapeMoon.setTranslateX(moon.getX());
 		imgMoon.setTranslateX(moon.getX());
-
+		double diff = Math.abs(shapeSun.getLayoutX() - moon.getX()-moon.getR());
+		double diameter = moon.getR() * 2;
+		if (diff <= diameter) {
+			for (int i = 0; i < planets.length; i++) {
+				planets[i].setVisible(true);
+				if(stars[i].isVisible()) {
+					stars[i].setVisible(false);
+				}
+				else {
+					stars[i].setVisible(true);
+				}
+			}
+			
+			double pos = diff / diameter;
+			int r = (int) (ILLUMINATED[0] * pos);
+			int g = (int) (ILLUMINATED[1] * pos);
+			int b = (int) (ILLUMINATED[2] * pos);
+			mainPane.setStyle("-fx-background-color:rgb("+r+","+g+","+b+");");
+		}
+		else {
+			for (int i = 0; i < stars.length; i++) {
+				planets[i].setVisible(false);
+				stars[i].setVisible(false);
+			}
+		}
 	}
-
 }
